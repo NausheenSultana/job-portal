@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 import employees from "../data/freelancers.json";
+import formStyle from "../styles/FormStyle";
 
 const SearcherProfile = (props) => {
   const params = useParams();
@@ -116,48 +117,7 @@ const SearcherProfile = (props) => {
               alignItems: "center",
             }}
           >
-            <FormControl
-              sx={{
-                m: 2,
-                "@media (min-width: 1500px)": {
-                  width: 600,
-                },
-                "& .MuiOutlinedInput-input": {
-                  color: "#777",
-                },
-                "&:hover .MuiOutlinedInput-input": {
-                  color: "#333",
-                },
-                "&:hover .MuiInputLabel-root": {
-                  color: "#333",
-                },
-                "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "#333",
-                  },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input":
-                  {
-                    color: "#333",
-                  },
-                "& .MuiInputLabel-root": {
-                  color: "#999",
-                  "&: .Mui-focused": {
-                    color: "#333",
-                  },
-                },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "#333",
-                  },
-                "&:hover .MuiInputLabel-root p": {
-                  color: "gold",
-                },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline p .MuiTypography-root .MuiTypography-body1":
-                  {
-                    color: "gold",
-                  },
-              }}
-            >
+            <FormControl sx={formStyle}>
               <TextField
                 name={"name"}
                 //   defaultValue={form.name}

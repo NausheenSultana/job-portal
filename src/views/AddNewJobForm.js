@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Autocomplete from "@mui/material/Autocomplete";
 import sharedStyles from "../styles/Styles";
+import formStyle from "../styles/FormStyle";
 import MuiAlert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import {
@@ -15,7 +16,7 @@ import {
 import skills from "../skills.json";
 import axios from "axios";
 import job_posters from "../data/employers.json";
-import AutocompleteComponent from "../components/AutocompleteComponent";
+import AutocompleteComponent from "../components/AutocompleteComponent.js";
 
 const AddJob = (props) => {
   const params = useParams();
@@ -120,13 +121,6 @@ const AddJob = (props) => {
     console.log(newJob);
   }, [newJob]);
 
-  const handleInputChange = (fieldName) => (event, newInputValue) => {
-    setNewJob((prevJob) => ({
-      ...prevJob,
-      [fieldName]: newInputValue,
-    }));
-  };
-
   return (
     <>
       <Grid container justifyContent="center" sx={{ marginTop: "40px" }}>
@@ -152,48 +146,7 @@ const AddJob = (props) => {
               alignItems: "center",
             }}
           >
-            <FormControl
-              sx={{
-                m: 2,
-                "@media (min-width: 1500px)": {
-                  width: 600,
-                },
-                "&:hover .MuiOutlinedInput-input": {
-                  color: "#333",
-                },
-                "&:hover .MuiInputLabel-root": {
-                  color: "#777",
-                },
-                "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "purple",
-                  },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input":
-                  {
-                    color: "333",
-                  },
-                "& .MuiInputLabel .Mui-error": {
-                  color: "#999 !important",
-                },
-                "& .MuiInputLabel-root": {
-                  color: "#999",
-                  "&: .Mui-focused": {
-                    color: "#333",
-                  },
-                },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                  {
-                    borderColor: "purple",
-                  },
-                "&:hover .MuiInputLabel-root p": {
-                  color: "gold",
-                },
-                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline p .MuiTypography-root .MuiTypography-body1":
-                  {
-                    color: "gold",
-                  },
-              }}
-            >
+            <FormControl sx={formStyle}>
               <TextField
                 name={"title"}
                 label="Job Title"
@@ -288,7 +241,7 @@ const AddJob = (props) => {
                 onChange={(e) => handleChange(e.target.value, "salary")}
                 style={{ marginRight: "60px" }}
               />
-              <Autocomplete
+              {/* <Autocomplete
                 multiple
                 id="tags-standard"
                 value={newJob.skillset}
@@ -310,31 +263,36 @@ const AddJob = (props) => {
                     placeholder="Skillsets"
                   />
                 )}
+              /> */}
+              <AutocompleteComponent
+                multiple={true}
+                value={newJob.skillset}
+                options={skills}
+                onChangeParameter="skillset"
+                newJob={newJob}
+                placeholder="Skillsets"
+                label="Skills"
+                setNewJob={setNewJob}
               />
               <AutocompleteComponent
-                multiple
-                id="tags-standard"
-                value={newJob.skillset}
-                options={skills}
-                sx={{ marginTop: "20px", marginRight: "60px" }}
-                getOptionLabel={(option) => option}
-                onChange={handleInputChange("skillset")}
-                renderInput={(params) => (
-                  <TextField
-                    {...params}
-                    error={newJob.skillset === "" || newJob.skillset === null}
-                    helperText={
-                      newJob.skillset === "" || newJob.skillset === null
-                        ? "Skills cannot be empty"
-                        : ""
-                    }
-                    variant="standard"
-                    label="Skills"
-                    placeholder="Skillsets"
-                  />
-                )}
+                multiple={false}
+                value={newJob.company}
+                options={companies}
+                onChangeParameter="company"
+                newJob={newJob}
+                label="Job company"
+                setNewJob={setNewJob}
               />
-              <Autocomplete
+              <AutocompleteComponent
+                multiple={false}
+                value={newJob.location}
+                options={places}
+                onChangeParameter="location"
+                newJob={newJob}
+                label="Job location"
+                setNewJob={setNewJob}
+              />
+              {/* <Autocomplete
                 sx={{ marginTop: "30px", marginRight: "60px" }}
                 id="company-autocomplete"
                 options={companies} // You should provide an array of place options here
@@ -355,8 +313,8 @@ const AddJob = (props) => {
                     fullWidth
                   />
                 )}
-              />
-              <Autocomplete
+              /> */}
+              {/* <Autocomplete
                 sx={{ marginTop: "30px", marginRight: "60px" }}
                 value={newJob.location}
                 id="place-autocomplete"
@@ -377,7 +335,7 @@ const AddJob = (props) => {
                     fullWidth
                   />
                 )}
-              />
+              /> */}
               <Typography sx={{ marginTop: "30px", marginRight: "60px" }}>
                 Contact Info:
               </Typography>
@@ -454,7 +412,7 @@ const AddJob = (props) => {
         </Grid>
         <Snackbar
           open={openSnackbar}
-          autoHideDuration={6000} // Adjust as needed
+          autoHideDuration={6000}
           onClose={handleSnackbarClose}
           sx={{ backgroundColor: "#007bff" }}
         >

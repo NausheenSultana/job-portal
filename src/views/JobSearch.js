@@ -19,6 +19,7 @@ import employees from "../data/freelancers.json";
 import skills from ".././skills.json";
 import { styled } from "@mui/system";
 import sharedStyles from "../styles/Styles";
+import formStyle from "../styles/FormStyle";
 import { Pagination } from "@mui/material";
 
 const Wrapper = styled("div")(sharedStyles.wrapperStyle);
@@ -334,59 +335,10 @@ const JobSearch = () => {
         >
           <FormControl
             sx={{
-              m: 2,
+              formStyle,
               "@media (min-width: 1500px)": {
                 width: 180,
               },
-              ".MuiChip-deleteIcon": {
-                color: "#333 !important",
-              },
-              ".MuiInputBase-root": {
-                "&:before": {
-                  borderBottom: "2px solid #333 !important",
-                },
-                "&:hover": {
-                  "&:before": {
-                    borderBottom: "2px solid #333 !important",
-                  },
-                },
-              },
-              ".MuiAutocomplete-tag": {
-                color: "#333",
-              },
-              "&:hover .MuiOutlinedInput-input": {
-                color: "purple",
-              },
-              ".MuiInput-input": {
-                color: "#333 !important",
-              },
-              "&:hover .MuiInputLabel-root": {
-                color: "purple",
-              },
-              "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: "purple",
-                },
-              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-input": {
-                color: "purple",
-              },
-              "& .MuiInputLabel-root": {
-                color: "#999",
-                "&: .Mui-focused": {
-                  color: "purple",
-                },
-              },
-              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: "purple",
-                },
-              "&:hover .MuiInputLabel-root p": {
-                color: "gold",
-              },
-              "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline p .MuiTypography-root .MuiTypography-body1":
-                {
-                  color: "gold",
-                },
             }}
           >
             Search by your skills
