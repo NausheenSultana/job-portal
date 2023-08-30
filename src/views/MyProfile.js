@@ -28,8 +28,8 @@ const SearcherProfile = (props) => {
     skills: [""],
   });
   useEffect(() => {
-    if (gitProfile) {
-      const parts = gitProfile.split("/");
+    if (profileData.git_url) {
+      const parts = profileData.git_url.split("/");
       const username = parts[3];
       //eg: https://github.com/barchart
       fetch(`https://api.github.com/users/${username}/repos`)
@@ -122,6 +122,9 @@ const SearcherProfile = (props) => {
                 "@media (min-width: 1500px)": {
                   width: 600,
                 },
+                "& .MuiOutlinedInput-input": {
+                  color: "#777",
+                },
                 "&:hover .MuiOutlinedInput-input": {
                   color: "#333",
                 },
@@ -180,16 +183,17 @@ const SearcherProfile = (props) => {
 
               <TextField
                 label="Add the link to your GitHub profile"
-                value={gitProfile}
+                value={profileData.git_url}
                 error={
-                  profile.git === "" ||
-                  profile.git === null ||
-                  !isGitHubProfileLinkValid(profile.git)
+                  profileData.git_url === "" ||
+                  profileData.git_url === null ||
+                  !isGitHubProfileLinkValid(profileData.git_url)
                 } //this will show err message only when there is error
                 helperText={
-                  ((profile.git === "" || profile.git === null) &&
+                  ((profileData.git_url === "" ||
+                    profileData.git_url === null) &&
                     "Git profile is required") ||
-                  (!isGitHubProfileLinkValid(profile.git) &&
+                  (!isGitHubProfileLinkValid(profileData.git_url) &&
                     "Invalid GitHub profile link")
                 }
                 onChange={handleGitProfileChange}
@@ -245,6 +249,7 @@ const SearcherProfile = (props) => {
                 width: "140px",
                 m: 2,
               }}
+              disabled
               //   disabled={continueButton}
               type={"submit"}
               endIcon={<ArrowForwardIosIcon />}

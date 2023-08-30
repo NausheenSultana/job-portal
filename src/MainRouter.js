@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "../src/views/Login";
-import Header from "./components/header";
+import Header from "./components/Header";
 import JobSearch from "../src/views/JobSearch";
 import SearcherProfile from "./views/MyProfile";
 import PostJob from "./views/MyJobPosts";

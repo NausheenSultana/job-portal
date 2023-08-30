@@ -15,6 +15,7 @@ import {
 import skills from "../skills.json";
 import axios from "axios";
 import job_posters from "../data/employers.json";
+import AutocompleteComponent from "../components/AutocompleteComponent";
 
 const AddJob = (props) => {
   const params = useParams();
@@ -298,7 +299,30 @@ const AddJob = (props) => {
                 renderInput={(params) => (
                   <TextField
                     {...params}
-                    error={newJob.skillset === "" || newJob.skillset === null} // Set error state
+                    error={newJob.skillset === "" || newJob.skillset === null}
+                    helperText={
+                      newJob.skillset === "" || newJob.skillset === null
+                        ? "Skills cannot be empty"
+                        : ""
+                    }
+                    variant="standard"
+                    label="Skills"
+                    placeholder="Skillsets"
+                  />
+                )}
+              />
+              <AutocompleteComponent
+                multiple
+                id="tags-standard"
+                value={newJob.skillset}
+                options={skills}
+                sx={{ marginTop: "20px", marginRight: "60px" }}
+                getOptionLabel={(option) => option}
+                onChange={handleInputChange("skillset")}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    error={newJob.skillset === "" || newJob.skillset === null}
                     helperText={
                       newJob.skillset === "" || newJob.skillset === null
                         ? "Skills cannot be empty"

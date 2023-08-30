@@ -8,7 +8,8 @@
     "location": "Bangalore",
     "experience": "3.5",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "amy.winehouse@example.com"
+    "email_id": "amy.winehouse@example.com",
+    "git_url": "https://github.com/barchart"
   },
   {
     "employee_id": "emp2",
@@ -19,7 +20,8 @@
     "location": "Mumbai",
     "experience": "5",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "michael.johnson@example.com"
+    "email_id": "michael.johnson@example.com",
+    "git_url": "https://github.com/barchart"
   },
   {
     "employee_id": "emp3",
@@ -30,7 +32,8 @@
     "location": "Delhi",
     "experience": "4",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "emily.brown@example.com"
+    "email_id": "emily.brown@example.com",
+    "git_url": "https://github.com/barchart"
   },
   {
     "employee_id": "emp4",
@@ -41,7 +44,8 @@
     "location": "Chennai",
     "experience": "6",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "robert.smith@example.com"
+    "email_id": "robert.smith@example.com",
+    "git_url": "https://github.com/barchart"
   },
   {
     "employee_id": "emp5",
@@ -52,7 +56,8 @@
     "location": "Kolkata",
     "experience": "3.5",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "sophia.davis@example.com"
+    "email_id": "sophia.davis@example.com",
+    "git_url": "https://github.com/barchart"
   },
   {
     "employee_id": "emp6",
@@ -68,7 +73,8 @@
     "location": "Hyderabad",
     "experience": "4.5",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "william.wilson@example.com"
+    "email_id": "william.wilson@example.com",
+    "git_url": "https://github.com/barchart"
   },
   {
     "employee_id": "emp7",
@@ -79,7 +85,8 @@
     "location": "Pune",
     "experience": "5.5",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "olivia.taylor@example.com"
+    "email_id": "olivia.taylor@example.com",
+    "git_url": "https://github.com/barchart"
   },
   {
     "employee_id": "emp8",
@@ -90,7 +97,8 @@
     "location": "Gurgaon",
     "experience": "7",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "james.martinez@example.com"
+    "email_id": "james.martinez@example.com",
+    "git_url": "https://github.com/facebook"
   },
   {
     "employee_id": "emp9",
@@ -101,7 +109,8 @@
     "location": "Ahmedabad",
     "experience": "4",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "ava.anderson@example.com"
+    "email_id": "ava.anderson@example.com",
+    "git_url": "https://github.com/vuejs"
   },
   {
     "employee_id": "emp10",
@@ -112,6 +121,7 @@
     "location": "Jaipur",
     "experience": "3",
     "phone_number": "+91 (XXX) XXX-XXXX",
-    "email_id": "ethan.harris@example.com"
+    "email_id": "ethan.harris@example.com",
+    "git_url": "https://github.com/barchart"
   }
 ]
