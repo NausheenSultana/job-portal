@@ -1,0 +1,28 @@
+                       +------------------------+
+                       |        Web Server      |
+                       | (Node.js)  |
+                       +------------+-----------+
+                                    |
+                                    v
+                       +------------+-----------+
+                       |   React Frontend App   |
+                       |    (Freelancer/Employer)|
+                       +------------+-----------+
+                                    |
+                 +------------------|------------------+
+                 |                  |                  |
+                 v                  v                  v
+          +------+------+    +------+------+    +------+
+          | Freelancer |    |   Employer  |    |    API   |
+          |  Section   |    |   Section   |    | (Backend)|
+          +------+------+    +------+------+    +------+
+          |              |    |              |
+          | User Profile |    | Job Posting  |
+          |   Component  |    |  Component   |
+          |              |    |              |
+          +--------------+    +--------------+
+          |              |    |              |
+          |  Job Listing |    | View Posted  |
+          |   Component  |    |   Jobs and   |
+          |              |    | Job Applicants|
+          +--------------+    +--------------+

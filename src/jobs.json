@@ -1,0 +1,232 @@
+[
+  {
+    "job_id": 1,
+    "job_title": "Software Engineer",
+    "company": "TechCo Inc.",
+    "location": "San Francisco, CA",
+    "salary": "$100 - $120",
+    "description": "We are seeking a skilled and motivated software engineer to join our team...",
+    "applied": [
+      { "name": "Emily Brown", "aid": "emp3" },
+      { "name": "Ava Anderson", "aid": "emp9" },
+      { "name": "Olivia Taylor", "aid": "emp7" }
+    ],
+    "requirements": [
+      "Bachelor's degree in Computer Science or related field",
+      "Proficiency in Python and JavaScript",
+      "Experience with web application development",
+      "Strong problem-solving skills",
+      "Ability to work in a team environment"
+    ],
+    "skillset": [
+      "Python",
+      "JavaScript",
+      "Web Development",
+      "Problem Solving",
+      "Teamwork"
+    ],
+    "contact": {
+      "pid": "pid10",
+      "name": "Jane Smith",
+      "email": "jane.smith@techco.com",
+      "phone": "+1 (555) 123-4567"
+    }
+  },
+  {
+    "job_id": 2,
+    "job_title": "Frontend Developer",
+    "company": "WebTech Solutions",
+    "location": "Seattle, WA",
+    "salary": "$90 - $110",
+    "description": "We are looking for a skilled frontend developer to build user-friendly web interfaces...",
+    "applied": [
+      { "name": "Emily Brown", "aid": "emp3" },
+      { "name": "Ava Anderson", "aid": "emp9" },
+      { "name": "Olivia Taylor", "aid": "emp7" }
+    ],
+    "requirements": [
+      "Bachelor's degree in Computer Science or related field",
+      "Proficiency in HTML, CSS, and JavaScript",
+      "Experience with frontend frameworks like React or Angular",
+      "Knowledge of responsive design principles",
+      "Ability to collaborate with the design team"
+    ],
+    "skillset": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Angular",
+      "Responsive Design",
+      "Collaboration"
+    ],
+    "contact": {
+      "pid": "pid5",
+      "name": "John Doe",
+      "email": "john.doe@webtechsolutions.com",
+      "phone": "+1 (555) 987-6543"
+    }
+  },
+  {
+    "job_id": 3,
+    "job_title": "Data Analyst",
+    "company": "Data Insights Co.",
+    "location": "New York, NY",
+    "salary": "$80 - $100",
+    "description": "We are seeking a data analyst to analyze and interpret complex datasets...",
+    "applied": [
+      { "name": "Emily Brown", "aid": "emp3" },
+      { "name": "Ava Anderson", "aid": "emp9" },
+      { "name": "Olivia Taylor", "aid": "emp7" }
+    ],
+    "requirements": [
+      "Bachelor's degree in Statistics, Mathematics, or related field",
+      "Proficiency in SQL and data visualization tools",
+      "Experience with data analysis and reporting",
+      "Strong analytical and problem-solving skills",
+      "Ability to present findings to stakeholders"
+    ],
+    "skillset": [
+      "SQL",
+      "Data Visualization",
+      "Data Analysis",
+      "Analytical Skills",
+      "Problem Solving",
+      "Communication"
+    ],
+    "contact": {
+      "pid": "pid7",
+      "name": "Mary Johnson",
+      "email": "mary.johnson@datainsightsco.com",
+      "phone": "+1 (555) 789-0123"
+    }
+  },
+  {
+    "job_id": 4,
+    "job_title": "UX Designer",
+    "company": "CreativeTech Studios",
+    "location": "San Francisco, CA",
+    "salary": "$80 - $100",
+    "description": "We are looking for a talented UX designer to create intuitive and visually appealing user experiences...",
+    "applied": [],
+    "requirements": [
+      "Bachelor's degree in Graphic Design, HCI, or related field",
+      "Proficiency in Adobe Creative Suite and UX design tools",
+      "Experience with user research and prototyping",
+      "Strong portfolio showcasing UX design projects",
+      "Ability to work collaboratively with development teams"
+    ],
+    "skillset": [
+      "Adobe Creative Suite",
+      "UX Design",
+      "User Research",
+      "Prototyping",
+      "Collaboration",
+      "Graphic Design"
+    ],
+    "contact": {
+      "pid": "pid1",
+      "name": "David Lee",
+      "email": "david.lee@creativetechstudios.com",
+      "phone": "+1 (555) 222-3333"
+    }
+  },
+  {
+    "job_id": 5,
+    "job_title": "Data Scientist",
+    "company": "TechAnalytics Corp.",
+    "location": "New York, NY",
+    "salary": "$110 - $130",
+    "description": "We are looking for a data scientist to analyze and interpret complex data...",
+    "applied": [
+      { "name": "Emily Brown", "aid": "emp3" },
+      { "name": "Olivia Taylor", "aid": "emp7" }
+    ],
+    "requirements": [
+      "Master's or Ph.D. in Statistics, Data Science, or a related field",
+      "Proficiency in Python, R, and SQL",
+      "Experience with data visualization and machine learning",
+      "Strong statistical analysis skills",
+      "Ability to communicate complex findings to non-technical stakeholders"
+    ],
+    "skillset": [
+      "Python",
+      "R",
+      "SQL",
+      "Data Visualization",
+      "Machine Learning",
+      "Statistical Analysis",
+      "Communication"
+    ],
+    "contact": {
+      "pid": "pid10",
+      "name": "John Adams",
+      "email": "john.adams@tacorp.com",
+      "phone": "+1 (555) 789-0123"
+    }
+  },
+  {
+    "job_id": 6,
+    "job_title": "Marketing Specialist",
+    "company": "Digital Solutions Agency",
+    "location": "Los Angeles, CA",
+    "salary": "$80 - $100",
+    "description": "We are seeking a marketing specialist to develop and execute digital marketing strategies...",
+    "applied": [
+      { "name": "Emily Brown", "aid": "emp3" },
+      { "name": "Robert Smith", "aid": "emp6" }
+    ],
+    "requirements": [
+      "Bachelor's degree in Marketing, Communications, or a related field",
+      "Experience in digital marketing and social media management",
+      "Knowledge of SEO and content marketing",
+      "Strong analytical and problem-solving skills",
+      "Ability to work independently and in a team"
+    ],
+    "skillset": [
+      "Digital Marketing",
+      "Social Media Management",
+      "SEO",
+      "Content Marketing",
+      "Analytical Skills",
+      "Problem Solving",
+      "Teamwork"
+    ],
+    "contact": {
+      "pid": "pid1",
+      "name": "Emily Wilson",
+      "email": "emily.wilson@digitalsolutions.com",
+      "phone": "+1 (555) 234-5678"
+    }
+  },
+  {
+    "job_id": 7,
+    "job_title": "UX/UI Designer",
+    "company": "Design Innovations Studio",
+    "location": "Seattle, WA",
+    "salary": "$90 - $110",
+    "description": "We are looking for a creative UX/UI designer to craft exceptional user experiences...",
+    "applied": [{ "name": "Sophia Davis", "aid": "emp5" }],
+    "requirements": [
+      "Bachelor's degree in Graphic Design, HCI, or related field",
+      "Proficiency in Adobe Creative Suite and UX design tools",
+      "Experience with user research and prototyping",
+      "Strong portfolio showcasing UX design projects",
+      "Ability to collaborate effectively with cross-functional teams"
+    ],
+    "skillset": [
+      "Adobe Creative Suite",
+      "UX Design",
+      "User Research",
+      "Prototyping",
+      "Collaboration",
+      "Graphic Design"
+    ],
+    "contact": {
+      "pid": "pid7",
+      "name": "David Lee",
+      "email": "david.lee@designinnovations.com",
+      "phone": "+1 (555) 345-6789"
+    }
+  }
+]

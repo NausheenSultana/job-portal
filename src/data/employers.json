@@ -1,0 +1,51 @@
+[
+  {
+    "pid": "pid10",
+    "name": "Jane Smith",
+    "password": "aferns",
+    "email": "jane.smith@techco.com",
+    "phone": "+1 (555) 123-4567"
+  },
+  {
+    "pid": "pid5",
+    "name": "John Doe",
+    "password": "aferns",
+    "email": "john.doe@webtechsolutions.com",
+    "phone": "+1 (555) 987-6543"
+  },
+  {
+    "pid": "pid7",
+    "name": "Mary Johnson",
+    "password": "aferns",
+    "email": "mary.johnson@datainsightsco.com",
+    "phone": "+1 (555) 789-0123"
+  },
+  {
+    "pid": "pid1",
+    "name": "David Lee",
+    "password": "aferns",
+    "email": "david.lee@creativetechstudios.com",
+    "phone": "+1 (555) 222-3333"
+  },
+  {
+    "pid": "pid4",
+    "name": "John Adams",
+    "password": "aferns",
+    "email": "john.adams@tacorp.com",
+    "phone": "+1 (555) 789-0123"
+  },
+  {
+    "pid": "pid2",
+    "name": "Emily Wilson",
+    "password": "aferns",
+    "email": "emily.wilson@digitalsolutions.com",
+    "phone": "+1 (555) 234-5678"
+  },
+  {
+    "pid": "pid3",
+    "name": "David Lee",
+    "password": "aferns",
+    "email": "david.lee@designinnovations.com",
+    "phone": "+1 (555) 345-6789"
+  }
+]

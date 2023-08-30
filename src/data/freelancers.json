@@ -1,0 +1,117 @@
+[
+  {
+    "employee_id": "emp1",
+    "password": "aferns",
+    "name": "Amy Winehouse",
+    "skills": ["python", "R", "Tableau", "HTML"],
+    "salary": "45LPA",
+    "location": "Bangalore",
+    "experience": "3.5",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "amy.winehouse@example.com"
+  },
+  {
+    "employee_id": "emp2",
+    "password": "aferns",
+    "name": "Michael Johnson",
+    "skills": ["Java", "C++", "SQL", "Spring Boot"],
+    "salary": "60LPA",
+    "location": "Mumbai",
+    "experience": "5",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "michael.johnson@example.com"
+  },
+  {
+    "employee_id": "emp3",
+    "password": "aferns",
+    "name": "Emily Brown",
+    "skills": ["JavaScript", "React", "Node.js", "CSS"],
+    "salary": "50LPA",
+    "location": "Delhi",
+    "experience": "4",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "emily.brown@example.com"
+  },
+  {
+    "employee_id": "emp4",
+    "password": "aferns",
+    "name": "Robert Smith",
+    "skills": ["Data Analysis", "Python", "Pandas", "NumPy"],
+    "salary": "55LPA",
+    "location": "Chennai",
+    "experience": "6",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "robert.smith@example.com"
+  },
+  {
+    "employee_id": "emp5",
+    "password": "aferns",
+    "name": "Sophia Davis",
+    "skills": ["C#", "ASP.NET", "MVC", "Entity Framework"],
+    "salary": "48LPA",
+    "location": "Kolkata",
+    "experience": "3.5",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "sophia.davis@example.com"
+  },
+  {
+    "employee_id": "emp6",
+    "password": "aferns",
+    "name": "William Wilson",
+    "skills": [
+      "Digital Marketing",
+      "SEO",
+      "Google Analytics",
+      "Content Writing"
+    ],
+    "salary": "42LPA",
+    "location": "Hyderabad",
+    "experience": "4.5",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "william.wilson@example.com"
+  },
+  {
+    "employee_id": "emp7",
+    "password": "aferns",
+    "name": "Olivia Taylor",
+    "skills": ["UI/UX Design", "Sketch", "InVision", "Adobe XD"],
+    "salary": "52LPA",
+    "location": "Pune",
+    "experience": "5.5",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "olivia.taylor@example.com"
+  },
+  {
+    "employee_id": "emp8",
+    "password": "aferns",
+    "name": "James Martinez",
+    "skills": ["Machine Learning", "TensorFlow", "Keras", "Python"],
+    "salary": "65LPA",
+    "location": "Gurgaon",
+    "experience": "7",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "james.martinez@example.com"
+  },
+  {
+    "employee_id": "emp9",
+    "password": "aferns",
+    "name": "Ava Anderson",
+    "skills": ["Salesforce", "Apex", "Visualforce", "Lightning"],
+    "salary": "55LPA",
+    "location": "Ahmedabad",
+    "experience": "4",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "ava.anderson@example.com"
+  },
+  {
+    "employee_id": "emp10",
+    "password": "aferns",
+    "name": "Ethan Harris",
+    "skills": ["JavaScript", "React Native", "MongoDB", "Express.js"],
+    "salary": "45LPA",
+    "location": "Jaipur",
+    "experience": "3",
+    "phone_number": "+91 (XXX) XXX-XXXX",
+    "email_id": "ethan.harris@example.com"
+  }
+]
