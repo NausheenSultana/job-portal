@@ -162,7 +162,9 @@ const SearcherProfile = (props) => {
               <ul>
                 {repositories &&
                   repositories.map((repo) => (
-                    <li key={repo.id}>{repo.name}</li>
+                    <li style={{ color: "#333" }} key={repo.id}>
+                      {repo.name}
+                    </li>
                   ))}
               </ul>
               <TextField

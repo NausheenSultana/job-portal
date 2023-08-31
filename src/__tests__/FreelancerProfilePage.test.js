@@ -3,7 +3,7 @@ import { render, screen, textMatcher } from "@testing-library/react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import FreelancerProfile from "../views/FreelancerProfilePage";
 
-jest.mock("../employee.json", () => [
+jest.mock("../data/employee.json", () => [
   {
     employee_id: "1",
     name: "John Doe",

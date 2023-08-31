@@ -7,28 +7,26 @@ import PlaceIcon from "@mui/icons-material/Place";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Face2Icon from "@mui/icons-material/Face2";
 import EditIcon from "@mui/icons-material/Edit";
-import { getJobs } from "../apiCalls/apiCalls.js";
+import axios from "axios";
+import job_posters from "../data/employers.json";
+
 const Wrapper = styled("div")(sharedStyles.wrapperStyle);
 
 export default function PostJob() {
   const params = useParams();
   const [jobs, setJobs] = useState([]);
-
-  // useEffect(() => {
-  //   const getJobs = async () => {
-  //     try {
-  //       const res = await axios.get(`http://localhost:8080/jobs`);
-  //       setJobs(res.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-  //   getJobs();
-  // }, []);
+  let jobPoster = job_posters.find((element) => element.pid === params.id);
 
   useEffect(() => {
-    const jobProps = getJobs();
-    jobProps.then((vals) => setJobs(vals));
+    const getJobs = async () => {
+      try {
+        const res = await axios.get(`http://localhost:8080/jobs`);
+        setJobs(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getJobs();
   }, []);
 
   let jobsCopy = [];
@@ -47,7 +45,7 @@ export default function PostJob() {
             <Typography
               sx={{ textAlign: "center", ...sharedStyles.titleStyle }}
             >
-              {params.id}
+              {jobPoster.name}
             </Typography>
             <Link
               to={`/add-job/${params.id}`}
@@ -80,8 +78,8 @@ export default function PostJob() {
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  ...sharedStyles.iconLinkStyle,
                 }}
-                className={sharedStyles.iconLinkStyle}
               >
                 <PlaceIcon style={{ marginRight: "8px" }} />{" "}
                 <span>{job.company}</span>
@@ -90,8 +88,8 @@ export default function PostJob() {
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  ...sharedStyles.iconLinkStyle,
                 }}
-                className={sharedStyles.iconLinkStyle}
               >
                 <BusinessCenterIcon style={{ marginRight: "8px" }} />{" "}
                 <span>{job.location}</span>
