@@ -67,7 +67,7 @@ export default function PostJob() {
 
         <Grid item xs={7} sx={{ marginRight: "16px" }}>
           {jobsCopy.map((job) => (
-            <Card style={{ ...sharedStyles.jobCardStyle }}>
+            <Card style={{ ...sharedStyles.cardStyle }}>
               <Typography sx={sharedStyles.titleStyle}>
                 {job.job_title}
               </Typography>

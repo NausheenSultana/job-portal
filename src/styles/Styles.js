@@ -67,7 +67,11 @@ const sharedStyles = {
   },
   jobCardStyle: {
     ...commonCardStyles(),
+    marginBottom: "0px",
     backgroundColor: "#dbe9fa !important",
+    "&:not(:last-child)": {
+      marginBottom: "20px",
+    },
   },
   profileInnerStyle: {
     display: "flex",
