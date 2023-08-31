@@ -11,6 +11,7 @@ import {
   Autocomplete,
   FormControl,
 } from "@mui/material";
+import { getJobs } from "../apiCalls/apiCalls.js";
 import PlaceIcon from "@mui/icons-material/Place";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Face2Icon from "@mui/icons-material/Face2";
@@ -180,18 +181,26 @@ const JobSearch = () => {
     return msg;
   };
 
+  // useEffect(() => {
+  //   const getJobs = async () => {
+  //     try {
+  //       const res = await axios.get(`http://localhost:8080/jobs`);
+  //       setJobs(res.data);
+  //       setSaveInitialState(res.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //     return;
+  //   };
+  //   getJobs();
+  // }, [setJobs]);
+
   useEffect(() => {
-    const getJobs = async () => {
-      try {
-        const res = await axios.get(`http://localhost:8080/jobs`);
-        setJobs(res.data);
-        setSaveInitialState(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-      return;
-    };
-    getJobs();
+    const jobProps = getJobs();
+    jobProps.then(function (vals) {
+      setJobs(vals);
+      setSaveInitialState(vals);
+    });
   }, [setJobs]);
 
   let filteredRows = [];
