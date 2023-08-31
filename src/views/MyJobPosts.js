@@ -7,24 +7,28 @@ import PlaceIcon from "@mui/icons-material/Place";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Face2Icon from "@mui/icons-material/Face2";
 import EditIcon from "@mui/icons-material/Edit";
-import axios from "axios";
-
+import { getJobs } from "../apiCalls/apiCalls.js";
 const Wrapper = styled("div")(sharedStyles.wrapperStyle);
 
 export default function PostJob() {
   const params = useParams();
   const [jobs, setJobs] = useState([]);
 
+  // useEffect(() => {
+  //   const getJobs = async () => {
+  //     try {
+  //       const res = await axios.get(`http://localhost:8080/jobs`);
+  //       setJobs(res.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   };
+  //   getJobs();
+  // }, []);
+
   useEffect(() => {
-    const getJobs = async () => {
-      try {
-        const res = await axios.get(`http://localhost:8080/jobs`);
-        setJobs(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    getJobs();
+    const jobProps = getJobs();
+    jobProps.then((vals) => setJobs(vals));
   }, []);
 
   let jobsCopy = [];
