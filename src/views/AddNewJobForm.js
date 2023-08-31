@@ -13,8 +13,8 @@ import {
   Typography,
   TextField,
 } from "@mui/material";
-import skills from "../skills.json";
 import axios from "axios";
+import skills from "../data/skills.json";
 import job_posters from "../data/employers.json";
 import AutocompleteComponent from "../components/AutocompleteComponent.js";
 

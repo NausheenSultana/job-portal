@@ -8,12 +8,14 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Face2Icon from "@mui/icons-material/Face2";
 import EditIcon from "@mui/icons-material/Edit";
 import axios from "axios";
+import job_posters from "../data/employers.json";
 
 const Wrapper = styled("div")(sharedStyles.wrapperStyle);
 
 export default function PostJob() {
   const params = useParams();
   const [jobs, setJobs] = useState([]);
+  let jobPoster = job_posters.find((element) => element.pid === params.id);
 
   useEffect(() => {
     const getJobs = async () => {
@@ -43,7 +45,7 @@ export default function PostJob() {
             <Typography
               sx={{ textAlign: "center", ...sharedStyles.titleStyle }}
             >
-              {params.id}
+              {jobPoster.name}
             </Typography>
             <Link
               to={`/add-job/${params.id}`}

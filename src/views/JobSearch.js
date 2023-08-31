@@ -16,7 +16,7 @@ import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Face2Icon from "@mui/icons-material/Face2";
 import EditIcon from "@mui/icons-material/Edit";
 import employees from "../data/freelancers.json";
-import skills from ".././skills.json";
+import skills from "../data/skills.json";
 import { styled } from "@mui/system";
 import sharedStyles from "../styles/Styles";
 import formStyle from "../styles/FormStyle";
