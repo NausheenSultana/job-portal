@@ -12,6 +12,7 @@ import {
   FormControl,
 } from "@mui/material";
 import axios from "axios";
+import { getJobs } from "../apiCalls/apiCalls.js";
 import PlaceIcon from "@mui/icons-material/Place";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Face2Icon from "@mui/icons-material/Face2";
@@ -194,13 +195,13 @@ const JobSearch = () => {
   //   };
   //   getJobs();
   // }, [setJobs]);
+
   useEffect(() => {
     const jobProps = getJobs();
-    jobProps &&
-      jobProps.then(function (vals) {
-        setJobs(vals);
-        setSaveInitialState(vals);
-      });
+    jobProps && jobProps.then(function (vals) {
+      setJobs(vals);
+      setSaveInitialState(vals);
+    });
   }, [setJobs]);
   let filteredRows = [];
 
