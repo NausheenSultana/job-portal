@@ -401,6 +401,7 @@ const AddJob = (props) => {
                 listStyleType: "none",
                 textDecoration: "none",
                 transition: "color 0.3s",
+                paddingTop: "10px",
                 "&:hover": {
                   color: "#333",
                 },

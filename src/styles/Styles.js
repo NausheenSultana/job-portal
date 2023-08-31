@@ -19,6 +19,17 @@ const sharedStyles = {
     fontSize: "16px",
     color: "#555",
   },
+  labelStyle: {
+    fontSize: "18px",
+    fontWeight: "bold",
+    color: "#333",
+    textAlign: "left", // Align labels to the left
+  },
+  dataStyle: {
+    fontSize: "16px",
+    color: "#555",
+    textAlign: "left", // Align data to the left
+  },
   iconLinkStyle: {
     color: "#888",
     display: "flex",

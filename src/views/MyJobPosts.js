@@ -78,8 +78,8 @@ export default function PostJob() {
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  ...sharedStyles.iconLinkStyle,
                 }}
-                className={sharedStyles.iconLinkStyle}
               >
                 <PlaceIcon style={{ marginRight: "8px" }} />{" "}
                 <span>{job.company}</span>
@@ -88,8 +88,8 @@ export default function PostJob() {
                 style={{
                   display: "flex",
                   alignItems: "center",
+                  ...sharedStyles.iconLinkStyle,
                 }}
-                className={sharedStyles.iconLinkStyle}
               >
                 <BusinessCenterIcon style={{ marginRight: "8px" }} />{" "}
                 <span>{job.location}</span>
