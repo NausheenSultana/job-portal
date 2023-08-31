@@ -24,15 +24,12 @@ test("Sign in", () => {
 
   var pwd = screen.getByTestId("password");
   expect(pwd).toBeInTheDocument();
+
   fireEvent.change(pwd.querySelector("input"), {
     target: { value: "example text" },
   });
+  var buttonList = screen.getByTestId("submit");
+  expect(buttonList).toBeInTheDocument();
 });
-
-describe("Testing the log in component", () => {
-  test("email input field should accept email", () => {});
-});
-// test("render the login with two buttons", async () => {
-//   const buttonList = await screen.getByTestId("submit");
-//   expect(buttonList).toHaveLength(1);
-// });
+// test("render the login with one button", () => {});
+// describe("Testing the log in component", () => {});

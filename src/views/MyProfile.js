@@ -29,7 +29,7 @@ const SearcherProfile = (props) => {
     skills: [""],
   });
   useEffect(() => {
-    if (profileData.git_url) {
+    if (profileData && profileData.git_url) {
       const parts = profileData.git_url.split("/");
       const username = parts[3];
       //eg: https://github.com/barchart
@@ -78,7 +78,7 @@ const SearcherProfile = (props) => {
             <Typography
               sx={{ textAlign: "center", ...sharedStyles.titleStyle }}
             >
-              {profileData.name}
+              {profileData && profileData.name}
             </Typography>
             <Link
               style={{
@@ -119,6 +119,7 @@ const SearcherProfile = (props) => {
           >
             <FormControl sx={formStyle}>
               <TextField
+                data-testid="nameField"
                 name={"name"}
                 //   defaultValue={form.name}
                 label="Name"
@@ -135,25 +136,28 @@ const SearcherProfile = (props) => {
                 //     "Name is required") ||
                 //   (!isNameValid(profile.name) && "Invalid name")
                 // }
-                value={profileData.name}
+                value={profileData && profileData.name}
                 id="name-standard-required"
                 onChange={(e) => handleChange(e.target.value, "name")}
                 style={{ marginRight: "60px" }}
               />
 
               <TextField
+                data-testid="githubProfile"
                 label="Add the link to your GitHub profile"
-                value={profileData.git_url}
+                value={profileData && profileData.git_url}
                 error={
-                  profileData.git_url === "" ||
-                  profileData.git_url === null ||
-                  !isGitHubProfileLinkValid(profileData.git_url)
+                  (profileData && profileData.git_url) === "" ||
+                  (profileData && profileData.git_url) === null ||
+                  !isGitHubProfileLinkValid(profileData && profileData.git_url)
                 } //this will show err message only when there is error
                 helperText={
-                  ((profileData.git_url === "" ||
-                    profileData.git_url === null) &&
+                  (((profileData && profileData.git_url === "") ||
+                    (profileData && profileData.git_url === null)) &&
                     "Git profile is required") ||
-                  (!isGitHubProfileLinkValid(profileData.git_url) &&
+                  (!isGitHubProfileLinkValid(
+                    profileData && profileData.git_url
+                  ) &&
                     "Invalid GitHub profile link")
                 }
                 onChange={handleGitProfileChange}
@@ -173,7 +177,7 @@ const SearcherProfile = (props) => {
                 name={"tenure"}
                 label="Total work experience in years"
                 required
-                value={profileData.experience}
+                value={profileData && profileData.experience}
                 margin="normal"
                 variant="standard"
                 //   error={

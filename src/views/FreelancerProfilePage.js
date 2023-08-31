@@ -19,7 +19,7 @@ const FreelancerProfile = (_) => {
     <Grid container>
       <Grid md={7} sx={{ margin: "100px auto" }}>
         <Card sx={sharedStyles.cardStyle}>
-          <Typography sx={sharedStyles.labelStyle}>Name:</Typography>
+          <Typography role="label" sx={sharedStyles.labelStyle}>Name:</Typography>
           <div style={sharedStyles.dataStyle}>{profileData.name}</div>
           {profileData.skills && profileData.skills.length > 0 && (
             <div>

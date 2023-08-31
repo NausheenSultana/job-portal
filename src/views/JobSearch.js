@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import * as React from "react";
 import { Link, useParams } from "react-router-dom";
-import axios from "axios";
+import { getJobs } from "../apiCalls/apiCalls.js";
 import {
   Typography,
   Button,
@@ -11,6 +11,7 @@ import {
   Autocomplete,
   FormControl,
 } from "@mui/material";
+import axios from "axios";
 import PlaceIcon from "@mui/icons-material/Place";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
 import Face2Icon from "@mui/icons-material/Face2";
@@ -180,20 +181,27 @@ const JobSearch = () => {
     return msg;
   };
 
+  // useEffect(() => {
+  //   const getJobs = async () => {
+  //     try {
+  //       const res = await axios.get(`http://localhost:8080/jobs`);
+  //       setJobs(res.data);
+  //       setSaveInitialState(res.data);
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //     return;
+  //   };
+  //   getJobs();
+  // }, [setJobs]);
   useEffect(() => {
-    const getJobs = async () => {
-      try {
-        const res = await axios.get(`http://localhost:8080/jobs`);
-        setJobs(res.data);
-        setSaveInitialState(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-      return;
-    };
-    getJobs();
+    const jobProps = getJobs();
+    jobProps &&
+      jobProps.then(function (vals) {
+        setJobs(vals);
+        setSaveInitialState(vals);
+      });
   }, [setJobs]);
-
   let filteredRows = [];
 
   return (
@@ -211,7 +219,7 @@ const JobSearch = () => {
             <Typography
               sx={{ textAlign: "center", ...sharedStyles.titleStyle }}
             >
-              {emp.name}
+              {emp && emp.name}
             </Typography>
             <Link
               to={`/my-profile/${params.id}`}
@@ -242,7 +250,10 @@ const JobSearch = () => {
             jobs &&
             jobs.slice(startIndex, endIndex).map((job) => (
               <>
-                <Card sx={{ ...sharedStyles.jobCardStyle }}>
+                <Card
+                  data-testid="jobCard"
+                  sx={{ ...sharedStyles.jobCardStyle }}
+                >
                   <Typography sx={sharedStyles.titleStyle}>
                     {job.job_title}
                   </Typography>
@@ -295,10 +306,7 @@ const JobSearch = () => {
                     </Typography>
                   ))}
                   <Button
-                    inputProps={{
-                      "aria-label": "country",
-                      "data-testid": "apply",
-                    }}
+                    data-testid="apply"
                     sx={{
                       display: "block",
                       backgroundColor: "dodgerblue !important",
@@ -364,6 +372,7 @@ const JobSearch = () => {
             <div style={{ marginTop: "50px" }}>
               Minimum Expected Salary
               <TextField
+                data-testid="salary-input"
                 inputProps={{ step: "5" }}
                 type="number"
                 variant="standard"
