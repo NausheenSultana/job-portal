@@ -181,27 +181,28 @@ const JobSearch = () => {
     return msg;
   };
 
-  // useEffect(() => {
-  //   const getJobs = async () => {
-  //     try {
-  //       const res = await axios.get(`http://localhost:8080/jobs`);
-  //       setJobs(res.data);
-  //       setSaveInitialState(res.data);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //     return;
-  //   };
-  //   getJobs();
-  // }, [setJobs]);
   useEffect(() => {
-    const jobProps = getJobs();
-    jobProps &&
-      jobProps.then(function (vals) {
-        setJobs(vals);
-        setSaveInitialState(vals);
-      });
+    const getJobs = async () => {
+      try {
+        const res = await axios.get(`http://localhost:8080/jobs`);
+        setJobs(res.data);
+        setSaveInitialState(res.data);
+      } catch (error) {
+        console.log(error);
+      }
+      return;
+    };
+    getJobs();
   }, [setJobs]);
+
+  // useEffect(() => {
+  //   const jobProps = getJobs();
+  //   jobProps &&
+  //     jobProps.then(function (vals) {
+  //       setJobs(vals);
+  //       setSaveInitialState(vals);
+  //     });
+  // }, [setJobs]);
   let filteredRows = [];
 
   return (
